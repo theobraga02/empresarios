@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { TopPhoto } from '../components/TopPhoto';
+import { EvolutionBlock } from '../components/EvolutionBlock';
 import type { AppData, DashboardTab } from '../types';
 import { TrendingUp, Award, Clock, DollarSign, Users, Sparkles, BookOpen, Moon, Dumbbell, ShieldCheck } from 'lucide-react';
 
@@ -80,12 +81,13 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
     background: 'var(--creme-escuro)',
     borderRadius: 16,
     padding: '16px',
-    border: '1px solid rgba(59,42,32,0.06)',
+    border: '1px solid rgba(255,255,255,0.08)',
   };
 
   return (
     <div>
       <TopPhoto screen={photoScreen} title="Painel" subtitle={photoSubtitle} />
+      <EvolutionBlock data={data} />
 
       {/* SUB-TABS */}
       <div style={{ display: 'flex', gap: 8, padding: '16px 20px 0' }}>
@@ -100,7 +102,7 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
               border: 'none',
               cursor: 'pointer',
               background: tab === t ? 'var(--caramelo)' : 'var(--creme-escuro)',
-              color: tab === t ? '#fff' : 'var(--espresso)',
+              color: tab === t ? 'var(--on-accent)' : 'var(--espresso)',
               fontSize: 14,
               fontWeight: 600,
               transition: 'all 200ms',
@@ -151,7 +153,7 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
                 <DollarSign size={16} />
                 <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase' }}>Saldo Caixa</span>
               </div>
-              <p style={{ fontSize: 20, fontWeight: 700, color: netBalance >= 0 ? 'var(--oliva)' : '#C24D38' }}>
+              <p style={{ fontSize: 20, fontWeight: 700, color: netBalance >= 0 ? 'var(--oliva)' : '#E5604A' }}>
                 R$ {netBalance.toLocaleString('pt-BR')}
               </p>
               <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>Entradas - Saídas</p>
@@ -192,7 +194,7 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
             </p>
             <div style={{ display: 'grid', gridAutoFlow: 'column', gridTemplateRows: 'repeat(7, 1fr)', gap: 4, overflowX: 'auto', paddingBottom: 4 }}>
               {Array.from({ length: 42 }).map((_, i) => {
-                const levels = ['var(--creme)', '#E5D9C6', '#D9B99B', '#B8652B'];
+                const levels = ['var(--surface-2)', '#3A3A3D', '#6B6B70', '#F2F2F3'];
                 const lvl = (i * 3 + 2) % 4;
                 return (
                   <div
@@ -254,8 +256,8 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
               {[
                 { label: 'Conheci (Leads)', count: clientsByStage.conheci, color: '#93A5C2' },
                 { label: 'Conversei (Qualificação)', count: clientsByStage.conversei, color: '#7BA4FF' },
-                { label: 'Proposta Enviada', count: clientsByStage.proposta, color: '#B8652B' },
-                { label: 'Fechou Contrato', count: clientsByStage.fechou, color: '#5B6B3A' },
+                { label: 'Proposta Enviada', count: clientsByStage.proposta, color: '#F2F2F3' },
+                { label: 'Fechou Contrato', count: clientsByStage.fechou, color: '#9A9AA0' },
               ].map(stage => {
                 const maxClients = Math.max(data.clients.length, 1);
                 const pct = Math.round((stage.count / maxClients) * 100);
@@ -265,7 +267,7 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
                       <span style={{ color: 'var(--espresso)', fontWeight: 500 }}>{stage.label}</span>
                       <span style={{ color: 'var(--text-muted)', fontWeight: 600 }}>{stage.count} cliente(s)</span>
                     </div>
-                    <div style={{ height: 8, background: 'rgba(255,255,255,0.6)', borderRadius: 4, overflow: 'hidden' }}>
+                    <div style={{ height: 8, background: 'var(--surface)', borderRadius: 4, overflow: 'hidden' }}>
                       <div
                         style={{
                           height: '100%',
@@ -299,7 +301,7 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
                       justifyContent: 'space-between',
                       alignItems: 'center',
                       padding: '10px 12px',
-                      background: 'rgba(255,255,255,0.6)',
+                      background: 'var(--surface)',
                       borderRadius: 10,
                     }}
                   >
@@ -392,7 +394,7 @@ export const DashboardScreen: React.FC<Props> = ({ data }) => {
                   <span
                     key={i}
                     style={{
-                      background: 'rgba(255,255,255,0.7)',
+                      background: 'var(--surface)',
                       padding: '4px 10px',
                       borderRadius: 12,
                       fontSize: 12,

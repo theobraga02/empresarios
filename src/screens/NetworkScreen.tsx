@@ -238,7 +238,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   padding: '6px 10px',
                   borderRadius: 16,
                   border: '1px solid var(--caramelo)',
-                  background: '#fff',
+                  background: 'var(--surface-2)',
                   fontSize: 14,
                   outline: 'none',
                   color: 'var(--espresso)',
@@ -251,7 +251,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   padding: '6px 12px',
                   borderRadius: 16,
                   background: 'var(--caramelo)',
-                  color: '#fff',
+                  color: 'var(--on-accent)',
                   border: 'none',
                   fontSize: 13,
                   fontWeight: 600,
@@ -294,7 +294,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
           padding: 16,
           background: 'var(--creme-escuro)',
           borderRadius: 14,
-          border: '1px solid rgba(59,42,32,0.06)',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, color: 'var(--caramelo)' }}>
@@ -319,7 +319,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
             border: 'none',
             cursor: 'pointer',
             background: activeTab === 'eventos' ? 'var(--caramelo)' : 'var(--creme-escuro)',
-            color: activeTab === 'eventos' ? '#fff' : 'var(--espresso)',
+            color: activeTab === 'eventos' ? 'var(--on-accent)' : 'var(--espresso)',
             fontSize: 14,
             fontWeight: 600,
             transition: 'all 200ms',
@@ -336,7 +336,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
             border: 'none',
             cursor: 'pointer',
             background: activeTab === 'contatos' ? 'var(--caramelo)' : 'var(--creme-escuro)',
-            color: activeTab === 'contatos' ? '#fff' : 'var(--espresso)',
+            color: activeTab === 'contatos' ? 'var(--on-accent)' : 'var(--espresso)',
             fontSize: 14,
             fontWeight: 600,
             transition: 'all 200ms',
@@ -367,7 +367,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   border: 'none',
                   cursor: 'pointer',
                   background: eventFilter === f.id ? 'var(--espresso)' : 'var(--creme-escuro)',
-                  color: eventFilter === f.id ? '#fff' : 'var(--text-muted)',
+                  color: eventFilter === f.id ? 'var(--on-accent)' : 'var(--text-muted)',
                   fontSize: 13,
                   fontWeight: 600,
                   transition: 'all 200ms',
@@ -382,9 +382,9 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
           <div
             style={{
               padding: '10px 14px',
-              background: '#FFF8F0',
+              background: '#1C1C1E',
               borderRadius: 10,
-              border: '1px solid rgba(184,101,43,0.25)',
+              border: '1px solid rgba(255,255,255,0.12)',
               display: 'flex',
               gap: 8,
               alignItems: 'center',
@@ -417,7 +417,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                       background: 'var(--creme-escuro)',
                       borderRadius: 14,
                       padding: 16,
-                      border: '1px solid rgba(59,42,32,0.06)',
+                      border: '1px solid rgba(255,255,255,0.08)',
                     }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
@@ -430,7 +430,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                             fontSize: 10,
                             fontWeight: 700,
                             color: 'var(--caramelo)',
-                            background: '#FFF8F0',
+                            background: '#1C1C1E',
                             padding: '2px 8px',
                             borderRadius: 10,
                             border: '1px solid var(--caramelo-claro)',
@@ -448,7 +448,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                         style={{
                           fontSize: 12,
                           color: 'var(--espresso)',
-                          background: 'rgba(255,255,255,0.7)',
+                          background: 'var(--surface)',
                           padding: '3px 8px',
                           borderRadius: 6,
                           fontWeight: 500,
@@ -460,7 +460,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                         style={{
                           fontSize: 12,
                           color: event.isOnline ? 'var(--caramelo)' : 'var(--oliva)',
-                          background: 'rgba(255,255,255,0.7)',
+                          background: 'var(--surface)',
                           padding: '3px 8px',
                           borderRadius: 6,
                           fontWeight: 600,
@@ -472,7 +472,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                         style={{
                           fontSize: 12,
                           color: event.priceType === 'gratuito' ? 'var(--oliva)' : 'var(--espresso)',
-                          background: 'rgba(255,255,255,0.7)',
+                          background: 'var(--surface)',
                           padding: '3px 8px',
                           borderRadius: 6,
                           fontWeight: 600,
@@ -487,7 +487,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                       style={{
                         marginTop: 10,
                         padding: '10px 12px',
-                        background: '#FFF8F0',
+                        background: '#1C1C1E',
                         borderRadius: 8,
                         borderLeft: '3px solid var(--caramelo)',
                       }}
@@ -534,7 +534,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                           border: isSaved ? '1px solid var(--oliva)' : '1px solid var(--caramelo-claro)',
                           cursor: 'pointer',
                           background: isSaved ? 'var(--oliva)' : 'transparent',
-                          color: isSaved ? '#fff' : 'var(--espresso)',
+                          color: isSaved ? 'var(--on-accent)' : 'var(--espresso)',
                           fontSize: 12,
                           fontWeight: 600,
                           minHeight: 44,
@@ -557,14 +557,14 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                           border: 'none',
                           cursor: 'pointer',
                           background: 'var(--espresso)',
-                          color: '#fff',
+                          color: 'var(--on-accent)',
                           fontSize: 12,
                           fontWeight: 600,
                           minHeight: 44,
-                          boxShadow: '0 2px 6px rgba(59,42,32,0.2)',
+                          boxShadow: '0 2px 6px rgba(255,255,255,0.08)',
                         }}
                       >
-                        <Sparkles size={14} color="#D9B99B" />
+                        <Sparkles size={14} color="#6B6B70" />
                         Abordagem com IA
                       </button>
                     </div>
@@ -591,10 +591,10 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                 border: 'none',
                 cursor: 'pointer',
                 background: 'var(--caramelo)',
-                color: '#fff',
+                color: 'var(--on-accent)',
                 fontSize: 13,
                 fontWeight: 600,
-                boxShadow: '0 2px 8px rgba(184,101,43,0.3)',
+                boxShadow: '0 2px 8px rgba(255,255,255,0.12)',
                 minHeight: 44,
               }}
             >
@@ -614,7 +614,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     border: 'none',
                     cursor: 'pointer',
                     background: contactFilter === f ? 'var(--espresso)' : 'transparent',
-                    color: contactFilter === f ? '#fff' : 'var(--text-muted)',
+                    color: contactFilter === f ? 'var(--on-accent)' : 'var(--text-muted)',
                     fontSize: 11,
                     fontWeight: 600,
                   }}
@@ -642,7 +642,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     background: 'var(--creme-escuro)',
                     borderRadius: 14,
                     padding: 16,
-                    border: '1px solid rgba(59,42,32,0.06)',
+                    border: '1px solid rgba(255,255,255,0.08)',
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
@@ -680,8 +680,8 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
                         borderRadius: 18,
                         border: 'none',
                         cursor: 'pointer',
-                        background: c.followUpDone ? 'var(--oliva)' : 'rgba(255,255,255,0.7)',
-                        color: c.followUpDone ? '#fff' : 'var(--espresso)',
+                        background: c.followUpDone ? 'var(--oliva)' : 'var(--surface)',
+                        color: c.followUpDone ? 'var(--on-accent)' : 'var(--espresso)',
                         fontSize: 12,
                         fontWeight: 600,
                         minHeight: 44,
@@ -726,7 +726,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
             </div>
 
             {/* 1. FRASE DE ABERTURA */}
-            <div style={{ background: '#fff', borderRadius: 12, padding: 14, border: '1px solid rgba(59,42,32,0.08)' }}>
+            <div style={{ background: 'var(--surface-2)', borderRadius: 12, padding: 14, border: '1px solid rgba(255,255,255,0.08)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
                 <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--caramelo)', textTransform: 'uppercase' }}>
                   1. Frase de abertura gentil
@@ -755,7 +755,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
             </div>
 
             {/* 2. TRÊS PERGUNTAS INVESTIGATIVAS */}
-            <div style={{ background: '#fff', borderRadius: 12, padding: 14, border: '1px solid rgba(59,42,32,0.08)' }}>
+            <div style={{ background: 'var(--surface-2)', borderRadius: 12, padding: 14, border: '1px solid rgba(255,255,255,0.08)' }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--caramelo)', textTransform: 'uppercase', display: 'block', marginBottom: 8 }}>
                 2. Três perguntas para puxar conversa
               </span>
@@ -796,7 +796,7 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
             </div>
 
             {/* 3. PEDIDO DE FOLLOW-UP */}
-            <div style={{ background: '#fff', borderRadius: 12, padding: 14, border: '1px solid rgba(59,42,32,0.08)' }}>
+            <div style={{ background: 'var(--surface-2)', borderRadius: 12, padding: 14, border: '1px solid rgba(255,255,255,0.08)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
                 <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--oliva)', textTransform: 'uppercase' }}>
                   3. Pedido claro para o follow-up em 48h
@@ -885,11 +885,11 @@ export const NetworkScreen: React.FC<Props> = ({ data, update, onBack }) => {
               border: 'none',
               cursor: 'pointer',
               background: 'var(--caramelo)',
-              color: '#fff',
+              color: 'var(--on-accent)',
               fontSize: 16,
               fontWeight: 600,
               minHeight: 44,
-              boxShadow: '0 2px 8px rgba(184,101,43,0.3)',
+              boxShadow: '0 2px 8px rgba(255,255,255,0.12)',
             }}
           >
             Salvar e agendar follow-up (48h)

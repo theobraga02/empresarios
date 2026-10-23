@@ -229,10 +229,10 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 8px 24px rgba(91,107,58,0.3)',
+            boxShadow: '0 8px 24px rgba(255,255,255,0.12)',
           }}
         >
-          <Check size={36} color="#fff" strokeWidth={3} />
+          <Check size={36} color="var(--on-accent)" strokeWidth={3} />
         </div>
         <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--espresso)', marginTop: 8 }}>
           Registro concluído!
@@ -295,7 +295,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                       setExercises(prev => prev.map((x, j) => (j === i ? { ...x, name: e.target.value } : x)))
                     }
                     placeholder="Ex: Supino, Agachamento, Corrida"
-                    style={{ ...inputStyle, marginBottom: 12, background: 'rgba(255,255,255,0.7)' }}
+                    style={{ ...inputStyle, marginBottom: 12, background: 'var(--surface)' }}
                   />
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
                     <div>
@@ -308,7 +308,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                             prev.map((x, j) => (j === i ? { ...x, sets: parseInt(e.target.value) || 0 } : x))
                           )
                         }
-                        style={{ ...inputStyle, background: 'rgba(255,255,255,0.7)' }}
+                        style={{ ...inputStyle, background: 'var(--surface)' }}
                       />
                     </div>
                     <div>
@@ -321,7 +321,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                             prev.map((x, j) => (j === i ? { ...x, reps: parseInt(e.target.value) || 0 } : x))
                           )
                         }
-                        style={{ ...inputStyle, background: 'rgba(255,255,255,0.7)' }}
+                        style={{ ...inputStyle, background: 'var(--surface)' }}
                       />
                     </div>
                     <div>
@@ -334,7 +334,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                             prev.map((x, j) => (j === i ? { ...x, load: parseFloat(e.target.value) || 0 } : x))
                           )
                         }
-                        style={{ ...inputStyle, background: 'rgba(255,255,255,0.7)' }}
+                        style={{ ...inputStyle, background: 'var(--surface)' }}
                       />
                     </div>
                   </div>
@@ -398,7 +398,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                     fontWeight: 600,
                     cursor: 'pointer',
                     background: cashType === 'entrada' ? 'var(--oliva)' : 'var(--creme-escuro)',
-                    color: cashType === 'entrada' ? '#fff' : 'var(--espresso)',
+                    color: cashType === 'entrada' ? 'var(--on-accent)' : 'var(--espresso)',
                   }}
                 >
                   ↑ Entrada
@@ -411,8 +411,8 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                     border: 'none',
                     fontWeight: 600,
                     cursor: 'pointer',
-                    background: cashType === 'saida' ? '#C24D38' : 'var(--creme-escuro)',
-                    color: cashType === 'saida' ? '#fff' : 'var(--espresso)',
+                    background: cashType === 'saida' ? '#E5604A' : 'var(--creme-escuro)',
+                    color: cashType === 'saida' ? 'var(--on-accent)' : 'var(--espresso)',
                   }}
                 >
                   ↓ Saída
@@ -608,7 +608,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                         border: 'none',
                         cursor: 'pointer',
                         background: focusMins === m ? 'var(--caramelo)' : 'var(--creme-escuro)',
-                        color: focusMins === m ? '#fff' : 'var(--espresso)',
+                        color: focusMins === m ? 'var(--on-accent)' : 'var(--espresso)',
                         fontWeight: 600,
                       }}
                     >
@@ -709,7 +709,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                         border: 'none',
                         cursor: 'pointer',
                         background: sleepQuality >= q ? 'var(--caramelo)' : 'var(--creme-escuro)',
-                        color: sleepQuality >= q ? '#fff' : 'var(--espresso)',
+                        color: sleepQuality >= q ? 'var(--on-accent)' : 'var(--espresso)',
                         fontSize: 18,
                         fontWeight: 700,
                       }}
@@ -728,14 +728,14 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
               marginTop: 14,
               padding: '14px',
               background: 'var(--caramelo)',
-              color: '#fff',
+              color: 'var(--on-accent)',
               border: 'none',
               borderRadius: 12,
               fontSize: 16,
               fontWeight: 600,
               cursor: 'pointer',
               minHeight: 46,
-              boxShadow: '0 4px 12px rgba(184,101,43,0.3)',
+              boxShadow: '0 4px 12px rgba(255,255,255,0.12)',
             }}
           >
             Salvar registro
@@ -765,7 +765,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
               gap: 16,
               padding: '16px',
               background: 'var(--creme-escuro)',
-              border: '1px solid rgba(59,42,32,0.06)',
+              border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: 16,
               cursor: 'pointer',
               textAlign: 'left',
@@ -777,7 +777,7 @@ export const RegisterScreen: React.FC<Props> = ({ update, onDone }) => {
                 width: 48,
                 height: 48,
                 borderRadius: 12,
-                background: 'rgba(255,255,255,0.7)',
+                background: 'var(--surface)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

@@ -13,8 +13,8 @@ interface Props {
 const STAGES: Array<{ id: Client['stage']; label: string; color: string }> = [
   { id: 'conheci', label: 'Conheci', color: '#93A5C2' },
   { id: 'conversei', label: 'Conversei', color: '#7BA4FF' },
-  { id: 'proposta', label: 'Proposta', color: '#B8652B' },
-  { id: 'fechou', label: 'Fechou!', color: '#5B6B3A' },
+  { id: 'proposta', label: 'Proposta', color: '#F2F2F3' },
+  { id: 'fechou', label: 'Fechou!', color: '#9A9AA0' },
 ];
 
 export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
@@ -155,7 +155,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
             background: 'var(--creme-escuro)',
             borderRadius: 16,
             padding: 18,
-            border: '1px solid rgba(59,42,32,0.06)',
+            border: '1px solid rgba(255,255,255,0.08)',
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
@@ -180,7 +180,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                 border: 'none',
                 cursor: 'pointer',
                 background: isEditingProfile ? 'var(--oliva)' : 'var(--caramelo)',
-                color: '#fff',
+                color: 'var(--on-accent)',
                 fontSize: 13,
                 fontWeight: 600,
               }}
@@ -216,7 +216,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
               )}
 
               {data.businessProfile.clientPain && (
-                <div style={{ background: 'rgba(255,255,255,0.6)', padding: 10, borderRadius: 10 }}>
+                <div style={{ background: 'var(--surface)', padding: 10, borderRadius: 10 }}>
                   <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                     Dor principal que resolve:
                   </p>
@@ -232,7 +232,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     <span
                       key={tag}
                       style={{
-                        background: 'rgba(255,255,255,0.7)',
+                        background: 'var(--surface)',
                         padding: '4px 10px',
                         borderRadius: 12,
                         fontSize: 12,
@@ -254,7 +254,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   value={profileForm.productName}
                   onChange={e => setProfileForm(p => ({ ...p, productName: e.target.value }))}
                   placeholder="Ex: Consultoria de Vendas"
-                  style={{ ...inputStyle, background: 'rgba(255,255,255,0.8)' }}
+                  style={{ ...inputStyle, background: 'var(--surface)' }}
                 />
               </div>
 
@@ -265,7 +265,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     value={profileForm.area}
                     onChange={e => setProfileForm(p => ({ ...p, area: e.target.value }))}
                     placeholder="Ex: Consultoria B2B"
-                    style={{ ...inputStyle, background: 'rgba(255,255,255,0.8)' }}
+                    style={{ ...inputStyle, background: 'var(--surface)' }}
                   />
                 </div>
                 <div>
@@ -274,7 +274,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     value={profileForm.price}
                     onChange={e => setProfileForm(p => ({ ...p, price: e.target.value }))}
                     placeholder="Ex: R$ 1.500"
-                    style={{ ...inputStyle, background: 'rgba(255,255,255,0.8)' }}
+                    style={{ ...inputStyle, background: 'var(--surface)' }}
                   />
                 </div>
               </div>
@@ -285,7 +285,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   value={profileForm.city}
                   onChange={e => setProfileForm(p => ({ ...p, city: e.target.value }))}
                   placeholder="Ex: São Paulo, SP"
-                  style={{ ...inputStyle, background: 'rgba(255,255,255,0.8)' }}
+                  style={{ ...inputStyle, background: 'var(--surface)' }}
                 />
               </div>
 
@@ -295,7 +295,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   value={profileForm.clientPain}
                   onChange={e => setProfileForm(p => ({ ...p, clientPain: e.target.value }))}
                   placeholder="Ex: Falta de tempo e desorganização nas vendas"
-                  style={{ ...inputStyle, background: 'rgba(255,255,255,0.8)' }}
+                  style={{ ...inputStyle, background: 'var(--surface)' }}
                 />
               </div>
 
@@ -306,14 +306,14 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     value={newTag}
                     onChange={e => setNewTag(e.target.value)}
                     placeholder="Adicionar tag (ex: Varejo, PME)"
-                    style={{ ...inputStyle, background: 'rgba(255,255,255,0.8)' }}
+                    style={{ ...inputStyle, background: 'var(--surface)' }}
                   />
                   <button
                     onClick={handleAddTag}
                     style={{
                       padding: '0 16px',
                       background: 'var(--caramelo)',
-                      color: '#fff',
+                      color: 'var(--on-accent)',
                       border: 'none',
                       borderRadius: 10,
                       fontWeight: 600,
@@ -329,7 +329,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                       key={t}
                       onClick={() => handleRemoveTag(t)}
                       style={{
-                        background: 'rgba(184,101,43,0.15)',
+                        background: 'rgba(255,255,255,0.12)',
                         color: 'var(--caramelo)',
                         padding: '4px 10px',
                         borderRadius: 12,
@@ -367,10 +367,10 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
               border: 'none',
               cursor: 'pointer',
               background: 'var(--caramelo)',
-              color: '#fff',
+              color: 'var(--on-accent)',
               fontSize: 13,
               fontWeight: 600,
-              boxShadow: '0 2px 8px rgba(184,101,43,0.3)',
+              boxShadow: '0 2px 8px rgba(255,255,255,0.12)',
             }}
           >
             <Plus size={15} /> Novo Cliente
@@ -387,7 +387,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
               border: 'none',
               cursor: 'pointer',
               background: activeStageFilter === 'todos' ? 'var(--espresso)' : 'var(--creme-escuro)',
-              color: activeStageFilter === 'todos' ? '#fff' : 'var(--text-muted)',
+              color: activeStageFilter === 'todos' ? 'var(--on-accent)' : 'var(--text-muted)',
               fontSize: 12,
               fontWeight: 600,
               whiteSpace: 'nowrap',
@@ -408,7 +408,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   border: 'none',
                   cursor: 'pointer',
                   background: isSelected ? s.color : 'var(--creme-escuro)',
-                  color: isSelected ? '#fff' : 'var(--espresso)',
+                  color: isSelected ? 'var(--on-accent)' : 'var(--espresso)',
                   fontSize: 12,
                   fontWeight: 600,
                   whiteSpace: 'nowrap',
@@ -437,7 +437,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     background: 'var(--creme-escuro)',
                     borderRadius: 14,
                     padding: 16,
-                    border: '1px solid rgba(59,42,32,0.06)',
+                    border: '1px solid rgba(255,255,255,0.08)',
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
@@ -451,7 +451,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                             padding: '2px 8px',
                             borderRadius: 10,
                             background: stageMeta?.color,
-                            color: '#fff',
+                            color: 'var(--on-accent)',
                             textTransform: 'uppercase',
                           }}
                         >
@@ -489,7 +489,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
                           borderRadius: 14,
                           border: 'none',
                           cursor: 'pointer',
-                          background: 'rgba(255,255,255,0.7)',
+                          background: 'var(--surface)',
                           color: 'var(--espresso)',
                           fontSize: 13,
                           fontWeight: 600,
@@ -550,7 +550,7 @@ export const BusinessScreen: React.FC<Props> = ({ data, update, onBack }) => {
               marginTop: 10,
               padding: '14px',
               background: 'var(--caramelo)',
-              color: '#fff',
+              color: 'var(--on-accent)',
               border: 'none',
               borderRadius: 12,
               fontSize: 16,

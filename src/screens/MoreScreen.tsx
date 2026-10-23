@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   Users,
+  Calendar,
   Briefcase,
   BookOpen,
   PlusCircle,
@@ -90,6 +91,13 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
 
   const menuItems = [
     {
+      id: 'agenda',
+      icon: Calendar,
+      label: 'Agenda',
+      desc: 'Compromissos e eventos do mês',
+      action: () => onNavigate('agenda'),
+    },
+    {
       id: 'rede',
       icon: Users,
       label: 'Rede',
@@ -134,7 +142,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                 padding: '14px 16px',
                 background: 'var(--creme-escuro)',
                 borderRadius: 14,
-                border: '1px solid rgba(59,42,32,0.06)',
+                border: '1px solid rgba(255,255,255,0.08)',
                 cursor: 'pointer',
                 textAlign: 'left',
                 minHeight: 44,
@@ -145,7 +153,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                   width: 40,
                   height: 40,
                   borderRadius: 10,
-                  background: 'rgba(255,255,255,0.7)',
+                  background: 'var(--surface)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -177,13 +185,13 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
             gap: 10,
             padding: '14px',
             background: 'var(--caramelo)',
-            color: '#fff',
+            color: 'var(--on-accent)',
             borderRadius: 14,
             border: 'none',
             cursor: 'pointer',
             fontSize: 15,
             fontWeight: 600,
-            boxShadow: '0 4px 12px rgba(184,101,43,0.3)',
+            boxShadow: '0 4px 12px rgba(255,255,255,0.12)',
             minHeight: 44,
           }}
         >
@@ -201,9 +209,9 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
           Configurações
         </p>
 
-        <div style={{ background: 'var(--creme-escuro)', borderRadius: 16, padding: 16, border: '1px solid rgba(59,42,32,0.06)' }}>
+        <div style={{ background: 'var(--creme-escuro)', borderRadius: 16, padding: 16, border: '1px solid rgba(255,255,255,0.08)' }}>
           {/* CIDADE */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 14, borderBottom: '1px solid rgba(59,42,32,0.08)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 14, borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <MapPin size={18} color="var(--caramelo)" />
               <div>
@@ -222,7 +230,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                     padding: '6px 8px',
                     borderRadius: 8,
                     border: '1px solid var(--caramelo)',
-                    background: '#fff',
+                    background: 'var(--surface-2)',
                     fontSize: 13,
                     width: 120,
                   }}
@@ -234,7 +242,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                     padding: '6px 10px',
                     borderRadius: 8,
                     background: 'var(--caramelo)',
-                    color: '#fff',
+                    color: 'var(--on-accent)',
                     border: 'none',
                     fontSize: 12,
                     fontWeight: 600,
@@ -282,8 +290,8 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                 borderRadius: 20,
                 border: 'none',
                 cursor: 'pointer',
-                background: notificationsEnabled ? 'var(--oliva)' : 'rgba(59,42,32,0.12)',
-                color: notificationsEnabled ? '#fff' : 'var(--espresso)',
+                background: notificationsEnabled ? 'var(--oliva)' : 'rgba(255,255,255,0.08)',
+                color: notificationsEnabled ? 'var(--on-accent)' : 'var(--espresso)',
                 fontSize: 12,
                 fontWeight: 600,
               }}
@@ -300,7 +308,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
 
       {/* APOIO EMOCIONAL CVV 188 (REGRA DE SEGURANÇA E CONTEÚDO) */}
       <div style={{ padding: '0 20px' }}>
-        <div style={{ background: '#FFF8F0', borderRadius: 16, padding: 16, border: '1px solid var(--caramelo-claro)' }}>
+        <div style={{ background: '#1C1C1E', borderRadius: 16, padding: 16, border: '1px solid var(--caramelo-claro)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--caramelo)', marginBottom: 6 }}>
             <Phone size={18} />
             <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--espresso)' }}>Apoio Emocional & Escuta</h3>
@@ -315,7 +323,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                 padding: '6px 14px',
                 borderRadius: 20,
                 background: 'var(--caramelo)',
-                color: '#fff',
+                color: 'var(--on-accent)',
                 fontSize: 12,
                 fontWeight: 700,
                 textDecoration: 'none',
@@ -335,7 +343,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
 
       {/* PRIVACIDADE & LGPD */}
       <div style={{ padding: '0 20px' }}>
-        <div style={{ background: 'var(--creme-escuro)', borderRadius: 16, padding: 16, border: '1px solid rgba(59,42,32,0.06)' }}>
+        <div style={{ background: 'var(--creme-escuro)', borderRadius: 16, padding: 16, border: '1px solid rgba(255,255,255,0.08)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--oliva)', marginBottom: 8 }}>
             <ShieldCheck size={18} />
             <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--espresso)' }}>Privacidade & Seus Direitos (LGPD)</h3>
@@ -358,7 +366,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                 padding: '10px',
                 borderRadius: 10,
                 border: 'none',
-                background: 'rgba(255,255,255,0.8)',
+                background: 'var(--surface)',
                 color: 'var(--espresso)',
                 fontSize: 13,
                 fontWeight: 600,
@@ -380,7 +388,7 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                 borderRadius: 10,
                 border: 'none',
                 background: 'rgba(194,77,56,0.12)',
-                color: '#C24D38',
+                color: '#E5604A',
                 fontSize: 13,
                 fontWeight: 600,
                 cursor: 'pointer',
@@ -432,9 +440,9 @@ export const MoreScreen: React.FC<Props> = ({ data, update, onNavigate, onOpenNe
                 key={img.screen}
                 style={{
                   padding: '10px 14px',
-                  background: '#fff',
+                  background: 'var(--surface-2)',
                   borderRadius: 10,
-                  border: '1px solid rgba(59,42,32,0.06)',
+                  border: '1px solid rgba(255,255,255,0.08)',
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',

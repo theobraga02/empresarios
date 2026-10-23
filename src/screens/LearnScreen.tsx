@@ -78,7 +78,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                 background: 'var(--creme-escuro)',
                 borderRadius: 16,
                 padding: 16,
-                border: '1px solid rgba(59,42,32,0.06)',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
@@ -89,7 +89,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
               </div>
 
               {/* Barra de progresso */}
-              <div style={{ height: 6, background: 'rgba(255,255,255,0.7)', borderRadius: 3, margin: '10px 0', overflow: 'hidden' }}>
+              <div style={{ height: 6, background: 'var(--surface)', borderRadius: 3, margin: '10px 0', overflow: 'hidden' }}>
                 <div
                   style={{
                     height: '100%',
@@ -100,7 +100,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                 />
               </div>
 
-              <div style={{ background: 'rgba(255,255,255,0.6)', padding: 12, borderRadius: 10, marginTop: 8 }}>
+              <div style={{ background: 'var(--surface)', padding: 12, borderRadius: 10, marginTop: 8 }}>
                 <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                   Prática da semana:
                 </p>
@@ -118,7 +118,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                     borderRadius: 14,
                     border: 'none',
                     background: 'var(--caramelo)',
-                    color: '#fff',
+                    color: 'var(--on-accent)',
                     fontSize: 12,
                     fontWeight: 600,
                     cursor: 'pointer',
@@ -147,7 +147,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                 background: 'var(--creme-escuro)',
                 borderRadius: 16,
                 overflow: 'hidden',
-                border: '1px solid rgba(59,42,32,0.06)',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
             >
               <div style={{ position: 'relative', height: 120 }}>
@@ -174,7 +174,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                       width: 44,
                       height: 44,
                       borderRadius: '50%',
-                      background: 'rgba(255,255,255,0.9)',
+                      background: 'var(--surface)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -206,7 +206,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                 <div
                   style={{
                     marginTop: 10,
-                    background: 'rgba(255,255,255,0.7)',
+                    background: 'var(--surface)',
                     padding: 10,
                     borderRadius: 10,
                     borderLeft: '3px solid var(--oliva)',
@@ -244,7 +244,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   gap: 12,
-                  border: '1px solid rgba(59,42,32,0.06)',
+                  border: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
                 <div style={{ flex: 1 }}>
@@ -282,7 +282,7 @@ export const LearnScreen: React.FC<Props> = ({ data, update, onBack }) => {
                       padding: '8px 12px',
                       borderRadius: 14,
                       background: 'var(--oliva)',
-                      color: '#fff',
+                      color: 'var(--on-accent)',
                       fontSize: 12,
                       fontWeight: 600,
                       textDecoration: 'none',
