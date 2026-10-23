@@ -3,12 +3,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        creme: '#F7F1E8',
-        'creme-escuro': '#E5D9C6',
-        espresso: '#3B2A20',
-        caramelo: '#B8652B',
-        'caramelo-claro': '#D9B99B',
-        oliva: '#5B6B3A',
+        bg: '#0B0B0C',
+        surface: '#141415',
+        'surface-2': '#1C1C1E',
+        grafite: '#2A2A2D',
+        mid: '#9A9AA0',
       },
       fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
     },

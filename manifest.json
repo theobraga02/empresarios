@@ -1,0 +1,12 @@
+{
+  "name": "Empresário",
+  "short_name": "Empresário",
+  "description": "Disciplina. Foco. Evolução.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B0C",
+  "theme_color": "#0B0B0C",
+  "icons": [
+    { "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%230B0B0C'/%3E%3Cpath fill='%23F2F2F3' d='M130 120h252v56H186v48h150v56H186v56h196v56H130z'/%3E%3C/svg%3E", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

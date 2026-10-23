@@ -1,0 +1,25 @@
+/* Sistema visual — Disciplina. Foco. Evolução.
+   Paleta: preto, grafite, branco e cinza. */
+:root {
+  --bg: #0B0B0C;
+  --surface: #141415;
+  --surface-2: #1C1C1E;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #F2F2F3;
+  --text-muted: rgba(242, 242, 243, 0.62);
+  --accent: #F2F2F3;
+  --on-accent: #0B0B0C;
+  --mid: #9A9AA0;
+  --danger: #E5604A;
+
+  /* Aliases: nomes antigos usados nas telas existentes */
+  --creme: var(--bg);
+  --creme-escuro: var(--surface-2);
+  --espresso: var(--text);
+  --caramelo: var(--accent);
+  --caramelo-claro: #3A3A3D;
+  --oliva: var(--mid);
+  --branco-leite: rgba(255, 255, 255, 0.04);
+  --separator: var(--line);
+  --border: var(--line);
+}
