@@ -201,7 +201,7 @@ export const TodayScreen: React.FC<Props> = ({ data, onToggleHabit, onNavigate, 
             Nenhum hábito cadastrado ainda.
           </p>
         ) : (
-          data.habits.map((habit, i) => (
+          data.habits.map(habit => (
             <React.Fragment key={habit.id}>
               <SectionDivider />
               <HabitItem habit={habit} onToggle={onToggleHabit} />
